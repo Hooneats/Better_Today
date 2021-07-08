@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="pyJAVAFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/pyJAVAFX</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.FXMLExample" />
+        <option name="description" value="" />
+        <option name="height" value="600" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1000" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="pyJAVAFX.jar">
+        <element id="module-output" name="pyJAVAFX" />
+      </element>
+      <element id="library" level="module" name="javafx-fxml" module-name="pyJAVAFX" />
+      <element id="library" level="project" name="ojdbc8" />
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>

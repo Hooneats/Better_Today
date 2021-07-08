@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLExampleController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #0064CD;">
+            <children>
+            <Pane fx:id="homePaneButton" onMouseClicked="#homeAction" onMouseEntered="#homeOnM" onMouseExited="#homeOutM" prefHeight="94.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="14.0" prefHeight="66.0" prefWidth="148.0" text="berrer today" textAlignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="32.0" fitWidth="24.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="searchPaneButton" onMouseClicked="#searchAction" onMouseEntered="#serachOnM" onMouseExited="#searchOutM" prefHeight="94.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="66.0" prefWidth="165.0" text="search">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/pngegg7.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="newsPaneButton" onMouseClicked="#newsAction" onMouseEntered="#newsOnM" onMouseExited="#newsOutM" prefHeight="94.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="66.0" prefWidth="165.0" text="news" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="41.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/newspaper.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="toDoPaneButton" onMouseClicked="#toDoAction" onMouseEntered="#toDoOnM" onMouseExited="#toDoOutM" prefHeight="94.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="66.0" prefWidth="165.0" text="todolist" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/list.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="122.0" prefWidth="200.0" />
+            <HBox alignment="BOTTOM_CENTER" onMouseClicked="#webToon">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/7777.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.699999988079071" green="0.699999988079071" blue="0.699999988079071" opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="67.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/1212.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.699999988079071" green="0.699999988079071" blue="0.699999988079071" opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </HBox>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </VBox>
+        <AnchorPane fx:id="mainBoard" layoutX="200.0" prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <Pane fx:id="firstHome" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ecedf5;">
+                    <children>
+                  <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-background-radius: 350;">
+                     <children>
+                              <ImageView fx:id="homeImageView" fitHeight="300.0" fitWidth="392.0" layoutX="225.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../img/firstpage.png" />
+                                  </image>
+                                  <effect>
+                                      <Reflection topOffset="-10.0" />
+                                  </effect>
+                              </ImageView>
+                        <ImageView fitHeight="66.0" fitWidth="116.0" layoutX="437.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ff.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                    </children>
+                </Pane>
+            <Pane fx:id="errorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="491.0" fitWidth="653.0" layoutX="74.0" layoutY="39.0" onMouseClicked="#errorNews" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ｅｒｒｏｒｐａｇｅ.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+                <Pane fx:id="secondSearch" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <TextField fx:id="gTF" layoutX="222.0" layoutY="67.0" onKeyPressed="#enterG" prefHeight="24.0" prefWidth="344.0" />
+                        <TextField fx:id="nTF" layoutX="222.0" layoutY="144.0" onKeyPressed="#enterN" prefHeight="24.0" prefWidth="344.0" />
+                        <TextField fx:id="dTF" layoutX="222.0" layoutY="228.0" onKeyPressed="#enterD" prefHeight="24.0" prefWidth="344.0" />
+                        <ImageView fx:id="googleLofo" fitHeight="130.0" fitWidth="131.0" layoutX="48.0" layoutY="14.0" onMouseClicked="#gGO" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/1.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="naverLogo" fitHeight="24.0" fitWidth="159.0" layoutX="51.0" layoutY="144.0" onMouseClicked="#nGo" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/2.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="daumLogo" fitHeight="107.0" fitWidth="142.0" layoutX="43.0" layoutY="187.0" onMouseClicked="#dGo" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/3.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="googleSearchImageView" fitHeight="44.0" fitWidth="68.0" layoutX="595.0" layoutY="57.0" onMouseClicked="#searchGoogle" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/4.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="naverSearchImageView" fitHeight="59.0" fitWidth="62.0" layoutX="595.0" layoutY="127.0" onMouseClicked="#searchNaver" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/55.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="daumSearchImageView" fitHeight="59.0" fitWidth="59.0" layoutX="597.0" layoutY="211.0" onMouseClicked="#searchDaum" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/6.png" />
+                            </image>
+                        </ImageView>
+                  <ImageView fx:id="googleLofo1" fitHeight="130.0" fitWidth="131.0" layoutX="43.0" layoutY="396.0" onMouseClicked="#gGO" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="naverLogo1" fitHeight="24.0" fitWidth="159.0" layoutX="222.0" layoutY="449.0" onMouseClicked="#nGo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="daumLogo1" fitHeight="107.0" fitWidth="142.0" layoutX="400.0" layoutY="408.0" onMouseClicked="#dGo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/3.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="allGND" layoutX="222.0" layoutY="379.0" onKeyPressed="#enterAll" prefHeight="24.0" prefWidth="344.0" />
+                  <Label layoutX="80.0" layoutY="368.0" onMouseClicked="#allGo" prefHeight="44.0" prefWidth="125.0" text="All-in-one">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="allsearchImageView" fitHeight="32.0" fitWidth="44.0" layoutX="586.0" layoutY="375.0" onMouseClicked="#searchAll" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/pngegg7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="66.0" fitWidth="137.0" layoutX="654.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/1212.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="76.0" fitWidth="192.0" layoutX="586.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ff.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="yTF" layoutX="220.0" layoutY="302.0" onKeyPressed="#enterY" prefHeight="24.0" prefWidth="344.0" />
+                  <ImageView fx:id="youtubeLogo" fitHeight="107.0" fitWidth="137.0" layoutX="60.0" layoutY="279.0" onMouseClicked="#yGo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ff.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="youtubeSearchImageView" fitHeight="51.0" fitWidth="44.0" layoutX="595.0" layoutY="295.0" onMouseClicked="#searchYoutube" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/fff.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+                <Pane fx:id="thirdNews" prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <SplitPane dividerPositions="0.49373433583959897" prefHeight="600.0" prefWidth="800.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="418.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Group layoutX="14.0" layoutY="14.0">
+                                 <children>
+                                    <Separator layoutY="33.0" prefHeight="0.0" prefWidth="344.0" style="-fx-background-color: #aaaaaa;" />
+                                    <Separator layoutX="64.0" layoutY="43.0" prefHeight="3.0" prefWidth="303.0" style="-fx-background-color: #aaaaaa;" />
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="67.0">
+                                 <children>
+                                    <Label fx:id="news1_num1" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image1" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but1" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#n1B1" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="119.0">
+                                 <children>
+                                    <Label fx:id="news1_num2" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image2" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but2" layoutX="36.0" layoutY="10.0" mnemonicParsing="false" onAction="#n1B2" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com2" layoutX="36.0" layoutY="37.0" prefHeight="14.0" prefWidth="115.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="163.0">
+                                 <children>
+                                    <Label fx:id="news1_num3" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image3" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but3" layoutX="37.0" layoutY="10.0" mnemonicParsing="false" onAction="#n1B3" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com3" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="114.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="207.0">
+                                 <children>
+                                    <Label fx:id="news1_num4" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image4" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but4" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B4" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                 </children>
+                              </Group>
+                              <ImageView fitHeight="32.0" fitWidth="44.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/news.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="132.0" layoutY="29.0" prefHeight="13.0" prefWidth="131.0" text="sort by click rate" />
+                              <Label fx:id="news1_com1" layoutX="52.0" layoutY="104.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
+                              <Label fx:id="news1_com4" layoutX="52.0" layoutY="244.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
+                              <Group layoutX="14.0" layoutY="258.0">
+                                 <children>
+                                    <Label fx:id="news1_num5" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image5" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but5" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B5" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com5" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="309.0">
+                                 <children>
+                                    <Label fx:id="news1_num6" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image6" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but6" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B6" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com6" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="360.0">
+                                 <children>
+                                    <Label fx:id="news1_num7" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image7" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but7" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B7" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com7" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="411.0">
+                                 <children>
+                                    <Label fx:id="news1_num8" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image8" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but8" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B8" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com8" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="462.0">
+                                 <children>
+                                    <Label fx:id="news1_num9" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image9" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but9" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B9" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com9" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="513.0">
+                                 <children>
+                                    <Label fx:id="news1_num10" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news1_image10" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news1_but10" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#n1B10" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news1_com10" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="111.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Group layoutX="14.0" layoutY="14.0">
+                                 <children>
+                                    <Separator layoutY="32.0" prefHeight="0.0" prefWidth="344.0" style="-fx-background-color: #aaaaaa;" />
+                                    <Separator layoutX="65.0" layoutY="42.0" prefHeight="3.0" prefWidth="303.0" style="-fx-background-color: #aaaaaa;" />
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="67.0">
+                                 <children>
+                                    <Label fx:id="news2_num1" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image1" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but1" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#n2B1" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com1" layoutX="38.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="120.0">
+                                 <children>
+                                    <Label fx:id="news2_num2" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image2" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but2" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#n2B2" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com2" layoutX="38.0" layoutY="37.0" prefHeight="14.0" prefWidth="115.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="164.0">
+                                 <children>
+                                    <Label fx:id="news2_num3" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image3" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but3" layoutX="37.0" layoutY="10.0" mnemonicParsing="false" onAction="#n2B3" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com3" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="114.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="208.0">
+                                 <children>
+                                    <Label fx:id="news2_num4" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image4" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but4" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B4" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com4" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font></Label>
+                                 </children>
+                              </Group>
+                              <ImageView fitHeight="32.0" fitWidth="44.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/news.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="132.0" layoutY="27.0" prefHeight="14.0" prefWidth="233.0" text="order of many comments" />
+                              <Group layoutX="14.0" layoutY="259.0">
+                                 <children>
+                                    <Label fx:id="news2_num5" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image5" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but5" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B5" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com5" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="310.0">
+                                 <children>
+                                    <Label fx:id="news2_num6" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image6" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but6" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B6" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com6" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="361.0">
+                                 <children>
+                                    <Label fx:id="news2_num7" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image7" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but7" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B7" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com7" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="412.0">
+                                 <children>
+                                    <Label fx:id="news2_num8" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image8" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but8" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B8" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com8" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="463.0">
+                                 <children>
+                                    <Label fx:id="news2_num9" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image9" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but9" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B9" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com9" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutX="14.0" layoutY="514.0">
+                                 <children>
+                                    <Label fx:id="news2_num10" layoutY="11.0" prefHeight="21.0" prefWidth="29.0" text="Label" />
+                                    <ImageView fx:id="news2_image10" fitHeight="44.0" fitWidth="50.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="news2_but10" layoutX="37.0" layoutY="8.0" mnemonicParsing="false" onAction="#n2B10" prefHeight="21.0" prefWidth="265.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;" text="Button" />
+                                    <Label fx:id="news2_com10" layoutX="37.0" layoutY="37.0" prefHeight="14.0" prefWidth="116.0" text="Label">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></Pane>
+                <Pane fx:id="loading" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <ImageView fx:id="loadingImageView" fitHeight="443.0" fitWidth="589.0" layoutX="73.0" layoutY="79.0" onMouseClicked="#bringInfoNews" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/１２１２.png" />
+                            </image>
+                        </ImageView>
+                  <ImageView fitHeight="138.0" fitWidth="217.0" layoutX="111.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/1212.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="130.0" fitWidth="137.0" layoutX="557.0" layoutY="429.0" onMouseClicked="#bringInfoNews" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/1111.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+            <Pane fx:id="toDoListPane" prefHeight="598.0" prefWidth="798.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="343.0" layoutY="28.0" prefHeight="24.0" prefWidth="78.0" text="todoList" />
+                  <Label alignment="CENTER" layoutX="619.0" layoutY="237.0" prefHeight="24.0" prefWidth="78.0" text="succeedList" />
+                  <ListView fx:id="toDoCompleteView" layoutX="558.0" layoutY="272.0" prefHeight="241.0" prefWidth="200.0" />
+                  <TextField fx:id="addToDoTextField" layoutX="43.0" layoutY="163.0" onKeyPressed="#enterToDoAdd" prefHeight="24.0" prefWidth="200.0" />
+                  <ImageView fitHeight="229.0" fitWidth="232.0" layoutX="65.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/to.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="241.0" fitWidth="217.0" layoutX="545.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/to2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="106.0" fitWidth="137.0" layoutX="90.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/do2.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="64.0" layoutY="548.0" mnemonicParsing="false" onAction="#save" text="saveAll" />
+                  <Button layoutX="17.0" layoutY="502.0" mnemonicParsing="false" onAction="#toDoListClearB" text="toDoListClear" />
+                  <Button layoutX="143.0" layoutY="502.0" mnemonicParsing="false" onAction="#succeedListClearB" text="succeedListClear" />
+                  <Button layoutX="117.0" layoutY="201.0" mnemonicParsing="false" onAction="#toDoAdd" text="add" />
+                  <Button layoutX="302.0" layoutY="456.0" mnemonicParsing="false" onAction="#todoCancel" text="cancel" />
+                  <Button layoutX="421.0" layoutY="456.0" mnemonicParsing="false" onAction="#toDoSuccess" text="success" />
+                  <Button layoutX="632.0" layoutY="526.0" mnemonicParsing="false" onAction="#comCancel" text="cancel" />
+                  <ListView fx:id="todoListView" layoutX="282.0" layoutY="75.0" prefHeight="373.0" prefWidth="217.0" />
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
